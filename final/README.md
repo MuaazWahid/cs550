@@ -7,12 +7,10 @@ Our goal is to support **precision agriculture** by enabling early detection of 
 This can be applied in the real world today with **real-time disease monitoring**, **precision farming**, and **smartphone-based diagnoses for farmers**.
 
 ## Team Members
-
 - Glenn Marvin Musoke
 - Muaaz Wahid
 
 ## Dataset
-
 - **Source**: Kaggle
 - **Size**: ~5.3k images (~6.25 GB)
 - **Categories**:
@@ -24,11 +22,7 @@ This can be applied in the real world today with **real-time disease monitoring*
 
 Each image was resized, cropped, and optionally grayscaled before being transformed into a 1D NumPy array for modeling.
 
-## Problem Statement
-
-
 ## Preprocessing Steps
-
 - Grayscale the image (optional)
 - Crop image (center-focused, 500×500 px)
 - Resize to standard dimensions (64×64)
@@ -36,7 +30,6 @@ Each image was resized, cropped, and optionally grayscaled before being transfor
 - Label encoding of disease types
 
 ## Machine Learning Models Used
-
 | Model                   | Accuracy | Notes                                   |
 |------------------------|----------|-----------------------------------------|
 | SVM (Linear)           | 53%      | Fast but lower accuracy                 |
@@ -47,22 +40,18 @@ Each image was resized, cropped, and optionally grayscaled before being transfor
 | XGBoost                | 64%      | Strong alternative to Random Forest     |
 
 ### Hyperparameter Tuning
-
 Used `GridSearchCV` for tuning the `C` and `gamma` parameters in SVM:
 - Best parameters: `C=10`, `gamma='scale'`
 - Best CV accuracy: 62%
 
 ## Dimensionality Reduction
-
 - Applied **PCA** (6 components) for visualization and potential performance improvement.
 
 ## Clustering
-
 - Implemented **DBSCAN** to explore underlying cluster structure post-PCA.
 - Visualized cluster distributions in 2D PCA space.
 
 ## Key Findings
-
 - Random Forest and XGBoost had the best overall performance.
 - Limited training samples for some categories (e.g., NCD) reduced precision.
 - Processed grayscale images slightly improved model performance in some configurations.
@@ -84,5 +73,4 @@ Used `GridSearchCV` for tuning the `C` and `gamma` parameters in SVM:
 - Develop a mobile-friendly API or interface for real-time farmer use.
 
 ## Acknowledgments
-- Professor Yasin Ceran, who taught this class on Machine Learning/Business Intelligence @ San Francisco Bay University
-- Kaggle for the dataset
+- Professor Yasin Ceran: taught this class on Machine Learning/Business Intelligence @ San Francisco Bay University
