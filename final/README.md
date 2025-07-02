@@ -1,4 +1,3 @@
-
 # Cauliflower Leaf Disease Classification Using Machine Learning
 
 This project focuses on applying machine learning techniques to classify cauliflower leaf images as either **healthy**, **infected by black rot**, or **attacked by insects**.
